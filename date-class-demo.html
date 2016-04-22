@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo for Date class</title>
+	<link rel="stylesheet" href="css/lib/jquery-ui.css">
+	<link rel="stylesheet" href="css/lib/jquery-ui.structure.css">
+	<link rel="stylesheet" href="css/lib/jquery-ui.theme.css">
+	<script src="js/lib/jquery-2.2.3.js"></script>
+	<script src="js/lib/jquery-ui.js"></script>
+	<script src="js/date.extension.js"></script>
+	<script src="js/date-demo.js"></script>
+</head>
+<body>
+	<p>演示js内置的Date类的各个方法。</p>
+	<p>三个扩展方法的相关代码请见: <a href="https://github.com/fatbigbright/js-tools/blob/master/date.extension.js">Github</a></p>
+	<div>
+		<span>点击并选择一个日期：</span>
+		<input type="text" name="" id="txtDate" readonly>
+	</div>
+	<div><label for="">获得当天是本周内第几天（周日为起始，取值范围0～6）getDay(): </label><label for="" id="lblGetDay"></label></div>
+	<div><label for="">获得当天是本月内第几天（取值范围1～31）getDate(): </label><label for="" id="lblGetDate"></label></div>
+	<div>
+		<label for="">扩展方法，获得当天所在周是本月第几周（取值从1开始）getWeekOfMonth()：</label>
+		<label id="lblGetWeekOfMonth" for=""></label>
+	</div>
+	<div>
+		<label for="">扩展方法，获得当天所在月的天数（一三五七八十腊……）getDayCountOfMonth()：</label>
+		<label id="lblGetDayCountOfMonth" for=""></label>
+	</div>
+	<div>
+		<label for="">扩展方法，当天所在周是否是最后一周isLastWeekOfMonth()：</label>
+		<label id="lblIsLastWeekOfMonth" for=""></label>
+	</div>
+</body>
+</html>
