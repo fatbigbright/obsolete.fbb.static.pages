@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Main Page</title>
+	<link rel="stylesheet" href="lib/jquery-ui-1.11.4/jquery-ui.css">
+	<link rel="stylesheet" href="lib/jquery-ui-1.11.4/jquery-ui.structure.css">
+	<link rel="stylesheet" href="lib/jquery-ui-1.11.4/jquery-ui.theme.css">
+	<link rel="stylesheet" href="lib/ui.jqgrid.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="lib/jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+	<script src="lib/jquery-ui-1.11.4/jquery-ui.js"></script>
+	<script src="lib/jquery.jqGrid.min.js"></script>
+	<script src="lib/i18n/grid.locale-en.js"></script>
+	<script src="js/index.js"></script>
+</head>
+<body>
+	<header>
+		<div class="header-right">
+			<span class="user">LNGC( S.C.Liang )&#9660;</span>
+			BMS Data Sharing
+		</div>
+		<div class="header-left"><img src="img/logo.png" alt=""></div>
+	</header>
+	<main>
+		<article>
+			<div class="favorite">
+				<span class="bzTitle">Favorite Rooms</span>
+				<table class="table-favorite" id="favorite">
+					<thead></thead>
+					<tbody></tbody>
+				</table>
+			</div>
+			<div class="search">
+				<span class="bzTitle">All Rooms</span>
+				<table class="table-all" id="all">
+					<thead></thead>
+					<tbody></tbody>
+				</table>
+				<div id="all-pager"></div>
+			</div>
+		</article>
+		<aside>
+			<ul>
+				<li><a href="#">End User</a></li>
+				<li><a href="#">Facility Admin</a></li>
+				<li><a href="#">System Admin</a></li>
+				<li><a href="#">Admin Log</a></li>
+			</ul>
+		</aside>
+	</main>
+	<footer>
+		<div class="map">
+			<a href="#">SITE MAP</a>
+			 | 
+			 <a href="#">GUIDE</a>
+		</div>
+		<div class="copy">Copyright&copy2016 NNRCC | All Rights Reserved</div>
+	</footer>
+	<div class="fav-diag" style="display:none">
+		<input type="hidden" name="" id="building">
+		<input type="hidden" name="" id="floor">
+		<input type="hidden" name="" id="roomNo">
+		<p>You are trying to add room "<span id='room'></span>" to your favorite room list, but you cannot mark more than 3 favorite rooms, please replace an old one.</p>
+		<table class="table-favorite" id="favorite-diag"></table>
+		<div class="bottom-bar">
+			<input type="button" value="Close">
+		</div>
+	</div>
+	<div class="gen-diag" style="display:none">
+		<p>Please select a period</p>
+		<label for="">from</label>
+		<input type="text" name="" id="fromDate" class="date">
+		<label for="">from</label>
+		<input type="text" name="" id="toDate" class="date">
+		<div class="bottom-bar">
+			<input type="button" value="Generate">
+		</div>
+	</div>
+</body>
+</html>
