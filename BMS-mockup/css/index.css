@@ -39,11 +39,22 @@ span.user{
 	font-size: 15px;
 }
 
+.function{
+	padding-top: 20px;
+	padding-left: 50px;
+}
+
 article {
 	width: 85%;
 	float: right;
 	position: relative;
 	height: 500px;
+}
+
+article img.scroll{
+	float: right;
+	position: relative;
+	height: 520px;
 }
 
 .favorite, .search{
