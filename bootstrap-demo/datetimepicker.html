@@ -14,9 +14,13 @@
 </head>
 <body>
   <p>This is a demo to try basic usage of bootstrap-datetimepicker plugin.</p>
-  <div class="input-append date" id="datetimepicker" date-date-format="yyyy-mm-dd">
-    <input id="" type="text" name="" size="16" readonly>
-    <span class="add-on"><i class="icon-th"></i></span>
+  <div class="col-sm-3">
+    <div class="input-group date" data-provide="datepicker" id="datetimepicker">
+      <input type="text" class="form-control">
+      <div class="input-group-addon">
+          <span class="glyphicon glyphicon-th"></span>
+      </div>
+    </div>
   </div>
 </body>
 </html>
