@@ -5,4 +5,11 @@ $(document).ready(function(){
             console.log('current tab id: ' + currentTabID);
         }
     }).tabs('option', 'active', 1);//activate the 2nd tab immediately
+    
+    var btn = $('<input type="button" value="test button"></input>');
+    btn.unbind().bind('click', function(){
+        alert('click');
+    });
+    
+    $('div#tab1').append(btn);
 });
