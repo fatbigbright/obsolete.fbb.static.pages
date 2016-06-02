@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="lib/jquery-ui-1.11.4/jquery-ui.css">
+    <script src="lib/jquery-ui-1.11.4/external/jquery/jquery.js"></script>
+    <script src="lib/jquery-ui-1.11.4/jquery-ui.js"></script>
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-right">
+        <span class="user">LNGC( S.C.Liang )&#9660;</span>
+        产品信息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        项目信息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        销售计划&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        中标价信息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        投标审批&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        价格审批&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        价格月报&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+      <div class="header-left"><img src="img/logo.png" alt=""></div>
+    </header>
+    <main>
+    <article>
+      <span class="title">安斯泰来投标管理系统</span>
+      <div class="function">
+        我的申请：
+      </div>
+      <div class="function">
+        <input type="button" value="创建新申请">
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>申请编号</td>
+            <td>审批状态</td>
+            <td>投标地区</td>
+            <td>采购周期</td>
+            <td>项目类别</td>
+            <td>项目备注</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#">启动审批</a></td>
+            <td><a href="#">修改详情</a></td>
+            <td>Req-LXZA-20160602-000</td>
+            <td>草稿</td>
+            <td>天津天津</td>
+            <td>100天</td>
+            <td>B类</td>
+            <td>重点</td>
+          </tr>
+          <tr>
+            <td><span class="unavailable">审批已启动</span></td>
+            <td><a href="#">查看详情</a></td>
+            <td>Req-LXZA-20160602-001</td>
+            <td>等待招标复核</td>
+            <td>吉林长春</td>
+            <td>80天</td>
+            <td>A类</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><a href="#">启动审批</a></td>
+            <td><a href="#">查看详情</a></td>
+            <td>Req-LXZA-20160602-002</td>
+            <td>商务审批驳回</td>
+            <td>广州广东</td>
+            <td>150天</td>
+            <td>C类</td>
+            <td>紧急</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="function">
+        我的审批：
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <td></td>
+            <td></td>
+            <td>申请编号</td>
+            <td>申请人</td>
+            <td>投标地区</td>
+            <td>采购周期</td>
+            <td>项目类别</td>
+            <td>项目备注</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="#" id="approve">审批</a></td>
+            <td><a href="#">查看详情</a></td>
+            <td>Req-LNGC-20160601-001</td>
+            <td>常亮</td>
+            <td>山东济南</td>
+            <td>100天</td>
+            <td>B类</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><a href="#">审批</a></td>
+            <td><a href="#">查看详情</a></td>
+            <td>Req-XHO-20160601-005</td>
+            <td>侯旭勇</td>
+            <td>安徽安庆</td>
+            <td>150天</td>
+            <td>A类</td>
+            <td>新药</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="display:none" id="approvement">
+          <span>项目信息：</span>
+          <table>
+            <thead>
+              <tr>
+                <td>申请编号</td>
+                <td>申请人</td>
+                <td>投标地区</td>
+                <td>采购周期</td>
+                <td>项目类别</td>
+                <td>项目备注</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Req-LNGC-20160601-001</td>
+                <td>常亮</td>
+                <td>山东济南</td>
+                <td>100天</td>
+                <td>B类</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <span>产品信息：</span>
+          <table>
+            <thead>
+              <tr>
+                <td>通用名</td>
+                <td>简称</td>
+                <td>剂型</td>
+                <td>规格</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>哈乐</td>
+                <td>HA-哈乐</td>
+                <td>20ml</td>
+                <td>20g</td>
+              </tr>
+            </tbody>
+          </table>
+          <span>批注：</span>
+          <textarea id="" name="" cols="30" rows="5"></textarea>
+          <div class="btns">
+          <input type="button" value="审批通过">
+          <input type="button" value="驳回申请">
+          <input type="button" value="关闭窗口">
+          </div>
+      </div>
+    </article>
+    <aside>
+      <ul>
+        <li><a href="#">产品信息</a></li>
+        <li><a href="#">项目信息</a></li>
+        <li><a href="#">销售计划</a></li>
+        <li><a href="#">中标价信息</a></li>
+        <li><a href="#">投标审批</a></li>
+        <li>价格审批
+          <ul>
+            <li><a href="#">二次议价</a></li>
+            <li><a href="#">谈判</a></li>
+          </ul></li>
+          <li><a href="#">价格月报</a></li>
+      </ul>
+    </aside>
+    </main>
+    <footer>
+      <div class="map">
+        <a href="#">联系我们</a>
+      </div>
+      <div class="copy">Copyright&copy2016 Astellas | All Rights Reserved</div>
+    </footer>
+  </body>
+</html>
