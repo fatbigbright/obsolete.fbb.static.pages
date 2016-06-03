@@ -165,6 +165,10 @@ footer div.map{
 	margin-left: 40px;
 }
 
+footer div.map a{
+  color: #d8d8d8;
+}
+
 footer div.copy{
 	margin-left: 40px;
 	width: 600px;

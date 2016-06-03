@@ -6,6 +6,6 @@ $(document).ready(function(){
       maxWidth: "800",
       modal: true,
       height: "auto"
-    }).dialog('open');
+    }).dialog('option', 'title', '审批操作').dialog('open');
   });
 });
