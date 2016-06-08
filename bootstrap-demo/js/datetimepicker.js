@@ -11,12 +11,21 @@ $(document).ready(function(){
     var result_str = getDateStr(start_date) + ' ~ ' + getDateStr(end_date);
     $(input).val(result_str);
   };
+  var dateformat = 'YYYY-MM-DD';
   $('div#datetimepicker').datetimepicker({
-    format: 'yyyy-mm-dd',
-    autoclose: true,
-    minView: '3'
-  }).on('change', function(e){
-    var text = $(e.currentTarget).find('input').val();
-    console.log(text);
+    format: dateformat,
+    //keepOpen: true,
+    //showClose: true,
+    //debug: true
+  }).on('dp.change', function(e){
+    //var text = $(e.currentTarget).find('input').val();
+    //console.log(text);
+    var value = $(e.currentTarget).find('input').val();
+    var firstDate = moment(value, dateformat).day(0).format(dateformat);
+    var lastDate =  moment(value, dateformat).day(6).format(dateformat);
+    $(e.currentTarget).find('input').val(firstDate + " - " + lastDate);
+  }).on('dp.show', function(e){
+    //$('.bootstrap-datetimepicker-widget tr:has(td.active)').css('background-color', '#337ab7');
+    $('.bootstrap-datetimepicker-widget tr:has(td.active) td').addClass('active');
   });
 });

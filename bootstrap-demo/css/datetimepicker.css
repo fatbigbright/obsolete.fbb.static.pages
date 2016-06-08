@@ -1,3 +1,7 @@
 .datetimepicker-days tr:hover, .datetimepicker-days td:hover{
     background-color: #f0f0f0;
 }
+
+.bootstrap-datetimepicker-widget tr:hover, .bootstrap-datetimepicker-widget td:hover{
+    background-color: #f0f0f0;
+}
