@@ -1,0 +1,31 @@
+{
+  "name": "fatbigbright.github.io",
+  "version": "0.0.1",
+  "description": "My front-end Demos",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fatbigbright/fatbigbright.github.io.git"
+  },
+  "keywords": [
+    "front-end",
+    "js",
+    "css"
+  ],
+  "author": "fatbigbright",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/fatbigbright/fatbigbright.github.io/issues"
+  },
+  "homepage": "https://github.com/fatbigbright/fatbigbright.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "eonasdan-bootstrap-datetimepicker": "^4.15.35",
+    "jqgrid": "^4.6.4",
+    "jquery": "~2.1.0",
+    "jquery-ui": "^1.10.5",
+    "require-css": "^0.1.8",
+    "requirejs": "~2.2.0"
+  }
+}
