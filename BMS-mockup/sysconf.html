@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>System Admin</title>
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="libs/jquery/jquery.min.js"></script>
+	<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+	<style>
+		table
+		{
+			margin: 50px 0 0 50px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="header-right">
+			<span class="user">LNGC( S.C.Liang )&#9660;</span>
+			BMS Data Sharing
+		</div>
+		<div class="header-left"><img src="img/logo.png" alt=""></div>
+	</header>
+	<main>
+		<article>
+			<ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+				<li class="active"><a href="#sysParam" data-toggle="tab">System Parameters</a></li>
+				<li><a href="#authConf" data-toggle="tab">Authorization Config</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane active" id="sysParam">
+					<table>
+						<tr>
+							<td>BMS Data Saving Days: </td>
+							<td><input id="" type="text" name="" value="100" class="form-control"></td>
+							<td>Days</td>
+						</tr>
+						<tr>
+							<td>Default Show Days: </td>
+							<td><input id="" type="text" name="" value="3" class="form-control"></td>
+							<td>Days</td>
+						</tr>
+						<tr>
+							<td>Max Day Range: </td>
+							<td><input id="" type="text" name="" value="7" class="form-control"></td>
+							<td>Days</td>
+						</tr>
+						<tr>
+							<td>Data Retrieving Frequency for regular rooms: </td>
+							<td>
+								<select id="" class="form-control" name="">
+									<option value="0">5 mins</option>
+									<option value="0">10 mins</option>
+									<option value="0">15 mins</option>
+								</select>
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>Data Retrieving Frequency for controling rooms: </td>
+							<td>
+								<select id="" class="form-control" name="">
+									<option value="0">5 mins</option>
+									<option value="0">10 mins</option>
+									<option value="0">15 mins</option>
+								</select>
+							</td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+				<div class="tab-pane" id="authConf"></div>
+			</div>
+		</article>
+		<aside>
+			<ul>
+				<li><a href="index.html">End User</a></li>
+				<li><a href="fadmin.html">Facility Admin</a></li>
+				<li><a href="sysconf.html">System Admin</a></li>
+				<li><a href="#">Admin Log</a></li>
+			</ul>
+		</aside>
+	</main>
+	<footer>
+		<div class="map">
+			<a href="#">SITE MAP</a>
+			 | 
+			 <a href="#">GUIDE</a>
+		</div>
+		<div class="copy">Copyright&copy2016 NNRCC | All Rights Reserved</div>
+	</footer>
+</body>
+</html>

@@ -48,7 +48,7 @@ article {
 	width: 85%;
 	float: right;
 	position: relative;
-	height: 500px;
+	height: 580px;
 }
 
 article img.scroll{
@@ -67,7 +67,7 @@ aside{
 	background-color: white;
 	font-size: 20px;
 	border-right: #d5e6f6 1px solid;
-	height: 500px;
+	height: 600px;
 	margin-right: 85%;
 }
 

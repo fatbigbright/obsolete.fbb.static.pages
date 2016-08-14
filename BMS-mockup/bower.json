@@ -1,0 +1,32 @@
+{
+  "name": "BMS-mockup",
+  "homepage": "https://github.com/fatbigbright/fatbigbright.github.io",
+  "authors": [
+    "fatbigbright <bigbrightf@gmail.com>"
+  ],
+  "description": "",
+  "main": "index.js",
+  "license": "Apache-2.0",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  },
+	"install": {
+		"path": "libs",
+		"sources": {
+			"jquery": [
+				"bower_components/jquery/dist/**"
+			],
+			"bootstrap": [
+				"bower_components/bootstrap/dist/**"
+			]
+		}
+	}
+}
