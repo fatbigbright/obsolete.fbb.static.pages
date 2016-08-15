@@ -16,17 +16,22 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "bootstrap-select": "^1.10.0",
+    "bootstrap-combobox": "^1.1.7"
   },
-	"install": {
-		"path": "libs",
-		"sources": {
-			"jquery": [
-				"bower_components/jquery/dist/**"
-			],
-			"bootstrap": [
-				"bower_components/bootstrap/dist/**"
-			]
-		}
-	}
+  "install": {
+    "path": "libs",
+    "sources": {
+      "jquery": [
+        "bower_components/jquery/dist/**"
+      ],
+      "bootstrap": [
+        "bower_components/bootstrap/dist/**"
+      ],
+      "bootstrap-select": [
+        "bower_components/bootstrap-select/dist/**"
+      ]
+    }
+  }
 }

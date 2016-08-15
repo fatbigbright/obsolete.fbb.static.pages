@@ -170,7 +170,7 @@ $(document).ready(function(){
             });
         }
     });
-    
+
     $('div.fav-diag').on('dialogclose', function(){
         $('div.fav-diag').find('input[type="hidden"]').val('');
         $('div.fav-diag').find('span#room').text('');
@@ -186,7 +186,7 @@ $(document).ready(function(){
         datatype: 'local',
         data: favRooms,
         width: 1024,
-        height: 85,
+        height: 90,
         rownumbers: true,
         colNames: ['Building', 'Floor', 'Room No.', '', ''],
         colModel: [
