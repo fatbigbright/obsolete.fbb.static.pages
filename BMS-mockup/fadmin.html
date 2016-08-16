@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Main Page</title>
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="libs/jquery/jquery.min.js"></script>
+	<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <style>
+      path#r421{ fill:#ff9800; }
+      path#r422{ fill:#ff6600; }
+      path#r423{ fill:#ff9800; }
+      path#r42c1{ fill:#ff3300; }
+      path#r42c2{ fill:#ff1100; }
+      path#r424{ fill:#ff0000; }
+      path#r425{ fill:#ff9800; }
+      .draggable{
+        /* cursor: move; */
+      }
+      svg text:hover{
+        cursor: Pointer;
+      }
+      svg text{
+        fill: #000000;
+      }
+    </style>
+    <script>
+      $(document).ready(function(){
+
+        //prevent parent element to scroll when mouse is hover above the svg
+        
+        $('svg')[0].onmouseover = function(){
+          document.body.style.overflow='hidden';
+        };
+        $('svg')[0].onmouseout = function(){
+          document.body.style.overflow = 'relative';
+        };
+        
+        //
+
+        $('svg')[0].addEventListener('mousewheel', function(e){
+          var deltaY = e.deltaY || e.wheelDelta || 0;
+          var viewBoxValues = $('svg').attr('viewBox').split(/\s+|,/);
+          $('svg').attr('viewBox', viewBoxValues[0] + ' ' 
+                                + viewBoxValues[1] + ' ' 
+                                + (parseInt(viewBoxValues[2]) + 0.16*deltaY).toString() + ' ' 
+                                + (parseInt(viewBoxValues[3]) + 0.09*deltaY).toString());
+        }, false);
+        
+        $("path#s1").attr('fill', '#5687dd').click(function(){
+            alert('path#s1');
+        });
+        $('svg text').click(function(){
+            alert($(this).text());
+        });
+      });
+    </script>
+</head>
+<body>
+	<header>
+		<div class="header-right">
+			<span class="user">LNGC( S.C.Liang )&#9660;</span>
+			BMS Data Sharing
+		</div>
+		<div class="header-left"><img src="img/logo.png" alt=""></div>
+	</header>
+	<main>
+		<article>
+			<div class="function">
+				<a href="#">Facility Admin</a>
+				&gt;
+                <a href="#">Floor Overview</a>
+			</div>
+            <h4 class="function">Building - 4, Floor - 2</h4>
+            <svg viewBox="-100 0 1280 720" class="draggable">
+<path id="r421" fill="#DCECCD" stroke="black" stroke-miterlimit="10" d="M73.654,55.25c2.5,0,40,0,40,0s19.5-30.5,45.5,0h38.5v38.5h-39
+	c0,0-21.75-23.25-45,0h-40V55.25z"/>
+<path id="r422" fill="#DCECCD" stroke="black" stroke-miterlimit="10" d="M197.965,55.25c2.5,0,40,0,40,0s19.5-30.5,45.5,0h38.5v38.5h-39
+	c0,0-21.75-23.25-45,0h-40V55.25z"/>
+<path id="r423" fill="#DCECCD" stroke="black" stroke-miterlimit="10" d="M321.965,55.25c2.5,0,40,0,40,0s19.5-30.5,45.5,0h38.5v38.5h-39
+	c0,0-21.75-23.25-45,0h-40V55.25z"/>
+<path id="r42c1" fill="#E1DCED" stroke="black" stroke-miterlimit="10" d="M161.732,113.75v29.512h13.758c0,0-2.258,12.562-14.379,12.668
+	c-12.121,0.105,27.621-4.512,27.75,24.446h-30.049v25.875H265v-26.869H232.99c0,0,6.511-28.64,31.005-27.314
+	c0,0-16.505-1.758-16.505-11.447H265V113.75L161.732,113.75L161.732,113.75z"/>
+<path id="r42c2" fill="#BAE2F3" stroke="black" stroke-miterlimit="10" d="M354.333,152.067c0,0-18.332,1.257-19.666-11.447h21V113.75H262
+	v26.869H244.49c0,0,0.5,10.766,16.505,11.447c0,0-23.683-1.721-31.005,27.314H262v26.869h93.667v-26.869h-28.562
+	c0,0,7.895-25.664,28.562-27.314"/>
+<path id="r424" fill="#DCECCD" stroke="black" stroke-miterlimit="10" d="M384.156,264.75c-2.5,0-40,0-40,0s-19.5,30.5-45.5,0h-38.5v-38.5
+	h39c0,0,21.75,23.25,45,0h40V264.75z"/>
+<path id="r425" fill="#DCECCD" stroke="black" stroke-miterlimit="10" d="M259.845,264.75c-2.5,0-40,0-40,0s-19.5,30.5-45.5,0h-38.5v-38.5
+	h39c0,0,21.75,23.25,45,0h40V264.75z"/>
+<text transform="matrix(1 0 0 1 122.1536 71.751)" fill="#6D6D6D" font-family="'MicrosoftYaHei'" font-size="12">4.2.1</text>
+<text transform="matrix(1 0 0 1 247.4866 71.751)" fill="#6D6D6D" font-family="'MicrosoftYaHei'" font-size="12">4.2.2</text>
+<text transform="matrix(1 0 0 1 187.844 160.0005)" fill="#6D6D6D" font-family="'MicrosoftYaHei'" font-size="12">4.2.c.1</text>
+<text transform="matrix(1 0 0 1 280.1565 160.0005)" fill="#6D6D6D" font-family="'MicrosoftYaHei'" font-size="12">4.2.c.2</text>
+<text transform="matrix(1 0 0 1 369.1223 71.751)" fill="#6D6D6D" font-family="'MicrosoftYaHei'" font-size="12">4.2.3</text>
+<text transform="matrix(1 0 0 1 187.844 252.2773)" fill="#6D6D6D" font-family="'MicrosoftYaHei'" font-size="12">4.2.4</text>
+<text transform="matrix(1 0 0 1 309.5002 252.2773)" fill="#6D6D6D" font-family="'MicrosoftYaHei'" font-size="12">4.2.5</text>
+            </svg>
+        </article>
+		<aside>
+			<ul>
+				<li><a href="index.html">End User</a></li>
+				<li><a href="fadmin.html">Facility Admin</a></li>
+				<li><a href="sysconf.html">System Admin</a></li>
+				<li><a href="#">Admin Log</a></li>
+			</ul>
+		</aside>
+	</main>
+	<footer>
+		<div class="map">
+			<a href="#">SITE MAP</a>
+			 | 
+			 <a href="#">GUIDE</a>
+		</div>
+		<div class="copy">Copyright&copy2016 NNRCC | All Rights Reserved</div>
+	</footer>
+</body>
+</html>
