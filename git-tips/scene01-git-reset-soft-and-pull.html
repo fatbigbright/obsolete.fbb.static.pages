@@ -3,34 +3,41 @@
 <head>
 	<meta charset="UTF-8">
 	<title>场景1: git reset在合并代码中的一种应用</title>
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme.min.css">
+	<script src="lib/jquery/jquery.min.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
 	<style>
-		table,tr{
-			padding: 0 0 0 0;
+		ol{
+			margin-left: -25px;
 		}
-		tr,td{
-			margin: 0 0 0 0;
-		}
-		td{
-			padding: 5px 0 5px 0;
-			border: solid black 1px;
-		}
-		td:nth-child(1) { text-align: center; }
 	</style>
 </head>
 <body>
-	<table cellspacing="0">
-		<tr>
-			<td>场景1</td>
-			<td><code>git reset</code>在合并代码中的一种应用</td>
-		</tr>
-		<tr>
-			<td>图例</td>
-			<td><img src="../img/scene1.png" alt=""></td>
-		</tr>
-		<tr>
-			<td>问题描述</td>
-			<td></td>
-		</tr>
-	</table>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-1">场景1</div>
+			<div class="col-md-11"><code>git reset</code>在合并代码中的一种应用</div>
+		</div>
+		<div class="row">
+			<div class="col-md-1">图例</div>
+			<div class="col-md-11"><img src="../img/scene1.png" alt=""></div>
+		</div>
+		<div class="row">
+			<div class="col-md-1">问题描述</div>
+			<div class="col-md-11"><p>在本地版本库进行了commit0-commit2-commit4的过程中，远程版本库被推送了commit1-commit3两次提交，本地在准备拉取远程提交时，需要把commit1-commit3与commit0进行合并，而忽略commit2-commit4。</p></div>
+		</div>
+		<div class="row">
+			<div class="col-md-1">方案</div>
+			<div class="col-md-11">
+				<ol>
+					<li><code>git reset --soft &lt;commit0&gt;</code>退回到本地的历史提交commit0，但将commit2及commit4两次提交中进行过的修改保留到缓冲区</li>
+					<li><code>git stash</code>将缓冲区未重新提交的修改压入暂存区，以清空本地所有修改</li>
+					<li><code>git pull origin master</code>，拉取合并远程分支到本地，如果存在冲突则处理冲突。</li>
+					<li><code>git stash pop</code>，如果仍然要把暂存区的修改提交到版本库，则让暂存区的修改出栈。</li>
+				</ol>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
