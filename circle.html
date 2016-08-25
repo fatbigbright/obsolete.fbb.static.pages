@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Draw circles</title>
+  <style>
+    div{
+    }
+    .circle{
+      position: relative;
+      margin: 20px 20px 20px 20px;
+      width: 30px;
+      height: 30px;
+      background-color: grey;
+      border: 1px solid black;
+      border-radius: 15px;
+    }
+    .quarter-circle{
+      border-radius: 0 30px 0 0;
+    }
+    .room {
+      width: 100px;
+      height: 100px;
+      display: block;
+      background-color: #cccccc;
+    }
+    .outer-quarter-circle-above {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      border-radius: 0 30px 0 0;
+      border-bottom-width: 0px;
+      background-color: grey;
+      border: 1px solid black;
+      border-bottom: 1px solid grey;
+      margin-left: 25px;
+      margin-bottom: -1px;
+      z-index: 1;
+    }
+    .triangle, .single.triangle {
+      position: relative;
+      background-color: grey;
+      border: 1px solid black;
+      width: 80px;
+      height: 80px;
+    }
+    .inner-quarter-circle-beneath {
+      position: relative;
+      margin-top: -31px;
+      margin-left: 25px;
+      background-color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 0 30px 0 0;
+      border: 1px solid black;
+      border-bottom: 0px solid white;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="room">
+    <div class="outer-quarter-circle-above"></div>
+    <div class="triangle"></div>
+    <div class="inner-quarter-circle-beneath"></div>
+  </div>
+  <div class="room">
+    <div class="single triangle"></div>
+  </div>
+</body>
+</html>
