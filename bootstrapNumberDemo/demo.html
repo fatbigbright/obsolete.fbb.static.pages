@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boostrap Number</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        .input-group{ text-align: center; padding: 5px; }
+    </style>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="bootstrap-number-input.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('input.form-control.number-input').bootstrapNumber();
+
+            $('input.form-control.number-input').siblings('span.input-group-btn').hide();
+
+            var inputFocus = function(){ $(this).siblings('span.input-group-btn').show(); };
+            var inputBlur = function(){ $(this).siblings('span.input-group-btn').hide(); };
+
+            $('input.form-control.number-input').focus(inputFocus)
+                                                .blur(inputBlur);
+
+            $('span.input-group-btn').mouseover(function(){ $(this).siblings('input.form-control.number-input').off('blur');})
+                                     .mouseout(function(){ $(this).siblings('input.form-control.number-input').blur(inputBlur);});  
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="" class="control-label">Number: </label>
+                    <div class="input-group">
+                        <input type="text" class="form-control number-input" value="1" min="1" max="100" style="text-align: center">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="control-label">Number: </label>
+                    <div class="input-group">
+                        <input type="text" class="form-control number-input" value="1" min="1" max="100" style="text-align: center">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
